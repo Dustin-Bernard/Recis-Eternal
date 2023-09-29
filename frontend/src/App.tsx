@@ -1,9 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import EternalCupPage from "./pages/EternalCupPage";
 import NavbarComponent from "./components/NavbarComponent";
 import FooterComponent from "./components/FooterComponent";
+import AdminPage from "./pages/AdminPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+
+
 
 const App = () => {
   return (
@@ -13,7 +17,9 @@ const App = () => {
       <Routes>
         <Route path="/" Component={HomePage} />
         <Route path="/about" Component={AboutPage} />
-        <Route path="/eternalcup" Component={EternalCupPage} />
+        <Route path="/admin" Component={AdminPage}/>
+        <Route path="/login" Component={LoginPage}/>
+        <Route path="/Register" Component={RegisterPage} />
       </Routes>
 
       <FooterComponent />
