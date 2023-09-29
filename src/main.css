@@ -1,0 +1,9 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* NavbarComponent Style */
+.navbar {
+  background-color: red;
+  display: flex;
+}
