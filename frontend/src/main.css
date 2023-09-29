@@ -4,6 +4,44 @@
 
 /* NavbarComponent Style */
 .navbar {
-  background-color: red;
+  background-color: rgb(173, 149, 149);
   display: flex;
+  position: fixed;
+}
+
+/* Global Style */
+.container {
+  border: 1px solid red; /* Buat Gampang Liat Posisi */
+}
+
+.container-margin {
+  margin-top: 5rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 1.5rem;
+}
+
+#admin-form-parent .form-control {
+  font-size: 1.1rem;
+}
+
+/* RegisterPage Style */
+
+#register-id {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#register-id input {
+  margin: 15px;
+  font-size: 1.1rem;
 }

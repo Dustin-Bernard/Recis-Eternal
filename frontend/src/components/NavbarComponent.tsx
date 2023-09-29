@@ -1,10 +1,9 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 
-
 const NavbarComponent = () => {
   return (
     <div>
-      <Navbar expand="md">
+      <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="/">Eternal Recis</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
