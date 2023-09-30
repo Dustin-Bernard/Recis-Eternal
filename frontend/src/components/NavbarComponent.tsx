@@ -5,7 +5,9 @@ const NavbarComponent = () => {
     <div>
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="/">Eternal Recis</Navbar.Brand>
+          <Navbar.Brand id="navbar-brand-id" href="/">
+            Eternal Recis
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">

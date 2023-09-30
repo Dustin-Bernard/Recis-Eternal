@@ -2,20 +2,17 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* NavbarComponent Style */
-.navbar {
-  background-color: rgb(173, 149, 149);
-  display: flex;
-  position: fixed;
-}
-
 /* Global Style */
 .container {
   border: 1px solid red; /* Buat Gampang Liat Posisi */
 }
 
-.container-margin {
+.container-margin-top {
   margin-top: 5rem;
+}
+
+.container-margin-bottom {
+  margin-bottom: 5rem;
 }
 
 .form-container {
@@ -28,8 +25,49 @@
   font-size: 1.5rem;
 }
 
-#admin-form-parent .form-control {
-  font-size: 1.1rem;
+/* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {
+  ...;
+} */
+
+/* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+  ...;
+} */
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+  ...;
+} */
+
+/* X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+  ...;
+} */
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) {
+  ...;
+} */
+
+#admin-form-parent {
+  font-size: 1rem;
+}
+
+/* NavbarComponent Style */
+.navbar {
+  background-color: rgb(255, 231, 231);
+  display: flex;
+  position: fixed;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav a {
+    font-size: 1.3rem;
+  }
+  #navbar-brand-id {
+    font-size: 1.5rem;
+  }
 }
 
 /* RegisterPage Style */
