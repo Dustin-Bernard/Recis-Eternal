@@ -7,14 +7,6 @@
   border: 1px solid red; /* Buat Gampang Liat Posisi */
 }
 
-.container-margin-top {
-  margin-top: 5rem;
-}
-
-.container-margin-bottom {
-  margin-bottom: 5rem;
-}
-
 .form-container {
   display: flex;
   justify-content: center;
@@ -56,7 +48,7 @@
 
 /* NavbarComponent Style */
 .navbar {
-  background-color: rgb(255, 231, 231);
+  background-color: rgb(90, 90, 90);
   display: flex;
   position: fixed;
 }
@@ -82,4 +74,42 @@
 #register-id input {
   margin: 15px;
   font-size: 1.1rem;
+}
+
+/* Thumbnail Style */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail {
+  height: auto;
+  width: 100vw;
+  background-color: red;
+}
+
+/* AboutPage Style */
+
+.col {
+  justify-content: center;
+  align-items: center;
 }

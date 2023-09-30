@@ -2,7 +2,7 @@ import { Form, Button, Container } from "react-bootstrap";
 
 export default function AdminPage() {
   return (
-    <Container className="container-margin-top form-container">
+    <Container className="my-5 form-container">
       <Form id="admin-form-parent">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>News Title</Form.Label>
