@@ -2,6 +2,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+.bg-img {
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+}
+
 /* Global Style */
 .container {
   border: 1px solid red; /* Buat Gampang Liat Posisi */
@@ -47,18 +54,16 @@
 }
 
 /* NavbarComponent Style */
-.navbar {
-  background-color: rgb(90, 90, 90);
-  display: flex;
-  position: fixed;
+.navbar-geming {
+  z-index: 1000;
 }
 
 @media (min-width: 992px) {
   .navbar-nav a {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   #navbar-brand-id {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -103,8 +108,8 @@
 
 .thumbnail {
   height: auto;
-  width: 100vw;
-  background-color: red;
+  width: 100%;
+  background-color: rgb(105, 92, 92, 0.7);
 }
 
 /* AboutPage Style */

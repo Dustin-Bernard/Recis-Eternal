@@ -10,7 +10,6 @@ import NewsPage from "./pages/NewsPage";
 import ShopPage from "./pages/ShopPage";
 import SchedulePage from "./pages/SchedulePage";
 
-
 const App = () => {
   return (
     <div>
@@ -28,7 +27,7 @@ const App = () => {
       </Routes>
 
       <FooterComponent />
-      </div>
+    </div>
   );
 };
 

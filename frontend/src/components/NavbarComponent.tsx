@@ -2,7 +2,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 const NavbarComponent = () => {
   return (
-    <div className="position-sticky top-0 w-100 z-3">
+    <div className="navbar-geming position-sticky top-0 w-100">
       <Navbar expand="lg">
         <Container>
           <Navbar.Brand id="navbar-brand-id" href="/">
