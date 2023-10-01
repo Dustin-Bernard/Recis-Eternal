@@ -1,21 +1,25 @@
 import { useState, FormEvent } from "react";
 import { Container, Button } from "react-bootstrap";
+import {  useNavigate } from "react-router-dom";
+
+
 
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   async function register(ev: FormEvent) {
     ev.preventDefault();
-    const response = await fetch("http://localhost:4000/registerf", {
+    const response = await fetch("http://localhost:3001/register", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
     });
     if (response.status === 200) {
-      alert("registration successful");
+      alert("Registration succeed, click the login button to access this admin page!");
     } else {
-      alert("registration failed");
+      alert("Registration failed");
     }
   }
 
@@ -36,9 +40,16 @@ export default function RegisterPage() {
             value={password}
             onChange={(ev) => setPassword(ev.target.value)}
           />
+          <div>
           <Button variant="primary" type="submit">
             Submit
           </Button>
+          </div>
+          <div>
+          <Button variant="primary" onClick={() => navigate("/login")}>
+            login
+          </Button>
+          </div>
         </form>
       </div>
     </Container>

@@ -1,24 +1,37 @@
 import { useState, FormEvent } from "react";
 import { Form, Button, Container } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
+
+
 
 export default function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
+
+
 
   async function login(ev: FormEvent) {
     ev.preventDefault();
-    await fetch("http://localhost:4000/login", {
+    const response = await fetch("http://localhost:3001/login", {
       method: "POST",
       body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
+      credentials: 'include',
     });
+    if(response.ok) {
+      setRedirect(true);
+    }
   }
 
+    if(redirect) {
+      return <Navigate to="/admin" replace={true} />
+    };
+    
   return (
     <Container className="my-5 form-container">
-      <Form id="admin-form-parent">
+      <Form id="admin-form-parent" onSubmit={login}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>
           <Form.Control
