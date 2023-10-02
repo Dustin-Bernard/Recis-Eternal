@@ -1,6 +1,6 @@
 import { useState, FormEvent } from "react";
 import { Form, Button, Container } from "react-bootstrap";
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -26,7 +26,7 @@ export default function Login() {
   }
 
     if(redirect) {
-      return <Navigate to="/admin" replace={true} />
+      navigate('/admin');
     };
     
   return (
