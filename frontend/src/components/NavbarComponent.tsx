@@ -5,7 +5,7 @@ const NavbarComponent = () => {
     <div className="navbar-geming position-sticky top-0 w-100">
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand id="navbar-brand-id" href="/">
+          <Navbar.Brand id="navbar-brand-id" href="/" className="mx-auto">
             Eternal Recis
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
