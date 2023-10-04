@@ -16,7 +16,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 
+
 mongoose.connect('mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.net/?retryWrites=true&w=majority');
+
+
 
 app.get('/tes', (req, res) => {
   res.json('test')
@@ -41,11 +44,12 @@ app.post('/login', async (req, res) => {
   const userDoc = await User.findOne({ username });
   const passOk = bcrypt.compareSync(password, userDoc.password);
   if (passOk) {
-    jwt.sign({ username, id: userDoc._id }, secret, {}, (err, token) => {
+    jwt.sign({ username, id: userDoc._id }, secret, { expiresIn: '1h' }, (err, token) => {
       if (err) throw err;
       res.cookie('token', token).json({
         id:userDoc._id,
         username,
+        token,
       });
     })
   } else {
@@ -53,6 +57,12 @@ app.post('/login', async (req, res) => {
   }
 
 })
+
+app.get('/admin', (req, res) => {
+ res.json('get admin berhasil');
+});
+
+
 
 
 

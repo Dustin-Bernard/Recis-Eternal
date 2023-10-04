@@ -1,40 +1,59 @@
-
+import { useEffect } from "react";
 import "./LoginPage";
-import { Form, Button, Container } from "react-bootstrap";
-
-
-
+import { useNavigate } from "react-router-dom";
+import AdminComponent from "../components/AdminComponent";
 
 
 
 export default function AdminPage() {
- 
+  const navigate = useNavigate();
 
-  return (
-    <Container className="my-5 form-container">
-      <Form id="admin-form-parent">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>News Title</Form.Label>
-          <Form.Control type="text" placeholder="Enter News Title" />
-          <Form.Text className="text-muted">
-            ex : RECIS A MENANG TELAK ATAS BUDI MULIA DALAM ETERNAL CUP!!
-          </Form.Text>
-        </Form.Group>
+  
 
-        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>News Description</Form.Label>
-          <Form.Control as="textarea" rows={3} />
-        </Form.Group>
-        <Form.Group controlId="formFileLg" className="mb-3">
-          <Form.Label>News Picture</Form.Label>
-          <Form.Control type="file" size="lg" />
-        </Form.Group>
-        <Button variant="success" type="submit">
-          Post
-        </Button>
-      </Form>
-    </Container>
-  );
+
+
+  useEffect(() => {
+  // Mendapatkan token dari localStorage
+  const token = localStorage.getItem("token");
+
+  // Jika token tidak ada, arahkan pengguna kembali ke halaman login
+  if (!token) {
+    alert("Anda harus login untuk mengakses halaman admin.");
+    navigate('/login');
+  } else {
+    // Lakukan permintaan ke halaman admin di sini
+    async function fetchAdminPage() {
+      try {
+        const response = await fetch("http://localhost:3001/admin", {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+          },
+        });
+
+        if (response.ok) {
+          // Tampilkan halaman admin
+          return (
+            <>
+              <AdminComponent/>
+            </>
+          );
+        } else {
+          // Jika permintaan gagal atau token tidak valid, arahkan kembali ke halaman login
+          alert('Akses ditolak. Anda akan kembali ke halaman login.');
+          navigate('/login');
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    }
+
+    fetchAdminPage();
+  }
+}, [navigate]);
+
+
+  
 }
 
 

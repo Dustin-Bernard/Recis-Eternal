@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect} from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
@@ -9,6 +9,7 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
+  
 
 
 
@@ -20,14 +21,25 @@ export default function Login() {
       headers: { "Content-Type": "application/json" },
       credentials: 'include',
     });
-    if(response.ok) {
+    if (response.ok) {
+      const data = await response.json();
+      const token = data.token;
+      console.log("Token JWT:", token); // Periksa token di sini
+      localStorage.setItem("token", token);
       setRedirect(true);
+      alert('login berhasil');
     }
+    
+    
   }
-
-    if(redirect) {
+  useEffect(() => {
+    // Redirect ke halaman admin jika login berhasil
+    if (redirect) {
       navigate('/admin');
-    };
+    }
+  }, [redirect, navigate]);
+
+    
     
   return (
     <Container className="my-5 form-container">
