@@ -70,7 +70,7 @@ export default function Login() {
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Login
         </Button>
         <Form.Label>Don't have account yet? Register now!</Form.Label>
         <Button variant="success" onClick={() => navigate("/Register")}>

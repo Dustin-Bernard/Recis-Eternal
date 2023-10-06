@@ -8,7 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import NewsPage from "./pages/NewsPage";
 import ShopPage from "./pages/ShopPage";
 import SchedulePage from "./pages/SchedulePage";
-import AdminComponent from "./components/AdminComponent";
+import AdminPage from "./pages/AdminPage";
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/news" Component={NewsPage} />
         <Route path="/shop" Component={ShopPage} />
         <Route path="/schedule" Component={SchedulePage} />
-        <Route path="/admin" Component={AdminComponent} />
+        <Route path="/admin" Component={AdminPage} />
         <Route path="/login" Component={LoginPage} />
         <Route path="/register" Component={RegisterPage} />
       </Routes>

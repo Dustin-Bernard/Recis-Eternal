@@ -1,12 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const Post = require('./models/Post');
 const app = express();
 const User = require('./models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
-
+const multer = require('multer');
+const uploadMiddleware = multer({ dest: 'uploads/' });
+const fs = require('fs');
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'ajkdflasjhfslah617t76dg78gd7812y';
@@ -14,6 +17,7 @@ const secret = 'ajkdflasjhfslah617t76dg78gd7812y';
 app.use(cors({ credentials: true, origin: 'http://localhost:5173', methods: ["GET", "POST"]}));
 app.use(express.json());
 app.use(cookieParser());
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 
 
@@ -46,7 +50,7 @@ app.post('/login', async (req, res) => {
   if (passOk) {
     jwt.sign({ username, id: userDoc._id }, secret, { expiresIn: '1h' }, (err, token) => {
       if (err) throw err;
-      res.cookie('token', token).json({
+      res.cookie('token', token, { expires: 0, httpOnly: true }).json({
         id:userDoc._id,
         username,
         token,
@@ -62,7 +66,85 @@ app.get('/admin', (req, res) => {
  res.json('get admin berhasil');
 });
 
+// app.post('/post', uploadMiddleware.single('file'), (req, res) => {
+//   res.json({files:req.file});
+// })
 
+app.post('/post', uploadMiddleware.single('file'), async (req,res) => {
+  res.json({files:req.file});
+  const {originalname,path} = req.file;
+  const parts = originalname.split('.');
+  const ext = parts[parts.length - 1];
+  const newPath = path+'.'+ext;
+  fs.renameSync(path, newPath);
+
+  
+  const {token} = req.cookies;
+  jwt.verify(token, secret, {}, async (err,info) => {
+    if (err) throw err;
+    const authorId = info.id;
+    const { title, desc,content,cover, author} = req.body;
+    const postDoc = await Post.create({
+      title,
+      desc,
+      content,
+      cover:newPath,
+      author:authorId,
+    });
+    res.json(postDoc);
+  });
+
+});
+
+app.put('/post',uploadMiddleware.single('file'), async (req,res) => {
+  let newPath = null;
+  if (req.file) {
+    const {originalname,path} = req.file;
+    const parts = originalname.split('.');
+    const ext = parts[parts.length - 1];
+    newPath = path+'.'+ext;
+    fs.renameSync(path, newPath);
+  }
+
+  const {token} = req.cookies;
+  jwt.verify(token, secret, {}, async (err,info) => {
+    if (err) throw err;
+    const {id,title,desc,content} = req.body;
+    const postDoc = await Post.findById(id);
+    const isAuthor = JSON.stringify(postDoc.author) === JSON.stringify(info.id);
+    if (!isAuthor) {
+      return res.status(400).json('you are not the author');
+    }
+    await postDoc.update({
+      title,
+      desc,
+      content,
+      cover: newPath ? newPath : postDoc.cover,
+    });
+
+    res.json(postDoc);
+  });
+
+});
+
+
+
+
+
+app.get('/post', async (req,res) => {
+  res.json(
+    await Post.find()
+      .populate('author', ['username'])
+      .sort({createdAt: -1})
+      .limit(20)
+  );
+});
+
+app.get('/post/:id', async (req, res) => {
+  const {id} = req.params;
+  const postDoc = await Post.findById(id).populate('author', ['username']);
+  res.json(postDoc);
+})
 
 
 
