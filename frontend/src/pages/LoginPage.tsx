@@ -24,7 +24,6 @@ export default function Login() {
     if (response.ok) {
       const data = await response.json();
       const token = data.token;
-      console.log("Token JWT:", token); // Periksa token di sini
       localStorage.setItem("token", token);
       setRedirect(true);
       alert('login berhasil');

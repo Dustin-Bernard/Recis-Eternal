@@ -8,7 +8,11 @@ import AboutPage from "./pages/AboutPage";
 import NewsPage from "./pages/NewsPage";
 import ShopPage from "./pages/ShopPage";
 import SchedulePage from "./pages/SchedulePage";
-import AdminPage from "./pages/AdminPage";
+import AdminPage from "./pages/AdminPage.tsx";
+import PostPage from "./pages/PostPage";
+
+
+
 
 const App = () => {
   return (
@@ -24,6 +28,7 @@ const App = () => {
         <Route path="/admin" Component={AdminPage} />
         <Route path="/login" Component={LoginPage} />
         <Route path="/register" Component={RegisterPage} />
+        <Route path="/post/:id" Component={PostPage} />
       </Routes>
 
       <FooterComponent />

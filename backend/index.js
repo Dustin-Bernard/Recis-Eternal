@@ -24,10 +24,12 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 mongoose.connect('mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.net/?retryWrites=true&w=majority');
 
 
+const tokenExpiration = '1h';
 
 app.get('/tes', (req, res) => {
   res.json('test')
 });
+
 
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;
@@ -43,12 +45,14 @@ app.post('/register', async (req, res) => {
   }
 });
 
+
+
 app.post('/login', async (req, res) => {
   const { username, password } = req.body
   const userDoc = await User.findOne({ username });
   const passOk = bcrypt.compareSync(password, userDoc.password);
   if (passOk) {
-    jwt.sign({ username, id: userDoc._id }, secret, { expiresIn: '1h' }, (err, token) => {
+    jwt.sign({ username, id: userDoc._id }, secret, { expiresIn: tokenExpiration }, (err, token) => {
       if (err) throw err;
       res.cookie('token', token, { expires: 0, httpOnly: true }).json({
         id:userDoc._id,
@@ -70,59 +74,50 @@ app.get('/admin', (req, res) => {
 //   res.json({files:req.file});
 // })
 
-app.post('/post', uploadMiddleware.single('file'), async (req,res) => {
-  res.json({files:req.file});
+app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
   const {originalname,path} = req.file;
   const parts = originalname.split('.');
   const ext = parts[parts.length - 1];
   const newPath = path+'.'+ext;
   fs.renameSync(path, newPath);
-
-  
+ 
   const {token} = req.cookies;
   jwt.verify(token, secret, {}, async (err,info) => {
-    if (err) throw err;
-    const authorId = info.id;
-    const { title, desc,content,cover, author} = req.body;
-    const postDoc = await Post.create({
-      title,
-      desc,
-      content,
-      cover:newPath,
-      author:authorId,
-    });
-    res.json(postDoc);
+     if (err) throw err;
+     const authorId = info.id;
+     const { title, desc,content,cover, author} = req.body;
+     const postDoc = await Post.create({
+       title,
+       desc,
+       content,
+       cover:newPath,
+       author:authorId,
+     });
+     res.json(postDoc);
   });
-
-});
-
-app.put('/post',uploadMiddleware.single('file'), async (req,res) => {
-  let newPath = null;
-  if (req.file) {
-    const {originalname,path} = req.file;
-    const parts = originalname.split('.');
-    const ext = parts[parts.length - 1];
-    newPath = path+'.'+ext;
-    fs.renameSync(path, newPath);
-  }
-
+ });
+ 
+ app.put('/post/:id', uploadMiddleware.single('file'), async (req, res) => {
+  const {id} = req.params;
+  const {originalname,path} = req.file;
+  const parts = originalname.split('.');
+  const ext = parts[parts.length - 1];
+  const newPath = path+'.'+ext;
+  fs.renameSync(path, newPath);
+ 
   const {token} = req.cookies;
   jwt.verify(token, secret, {}, async (err,info) => {
-    if (err) throw err;
-    const {id,title,desc,content} = req.body;
-    const postDoc = await Post.findById(id);
-    const isAuthor = JSON.stringify(postDoc.author) === JSON.stringify(info.id);
-    if (!isAuthor) {
-      return res.status(400).json('you are not the author');
-    }
-    await postDoc.update({
-      title,
-      desc,
-      content,
-      cover: newPath ? newPath : postDoc.cover,
-    });
-
-    res.json(postDoc);
+     if (err) throw err;
+     const authorId = info.id;
+     const { title, desc,content,cover, author} = req.body;
+     const postDoc = await Post.findByIdAndUpdate(id, {
+       title,
+       desc,
+       content,
+       cover:newPath,
+       author:authorId,
+     }, {new: true});
+     res.json(postDoc);
   });
 
 });
@@ -141,10 +136,11 @@ app.get('/post', async (req,res) => {
 });
 
 app.get('/post/:id', async (req, res) => {
+  
   const {id} = req.params;
   const postDoc = await Post.findById(id).populate('author', ['username']);
   res.json(postDoc);
-})
+});
 
 
 
