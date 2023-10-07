@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import {  FormEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Container } from "react-bootstrap";
 import 'react-quill/dist/quill.snow.css';
@@ -13,11 +13,10 @@ export default function AdminPage() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
-  const [file, setFile] = useState([]);
+  const [files, setFiles] = useState<FileList | null>(null);
   const [content, setContent] = useState('');
   const [redirect, setRedirect] = useState(false);
   
- 
  
   // Fungsi untuk logout
   function logout() {
@@ -69,16 +68,21 @@ export default function AdminPage() {
   }, [navigate]);
 
 
-  async function createNewPost(ev: React.FormEvent) {
+  async function createNewPost(ev: FormEvent) {
     const data = new FormData();
     data.set('title', title);
     data.set('desc', desc);
     data.set('content', content);
-    if (file) {
-       data.set('file', file[0]);
-    }
+    // Check if files is not null before trying to access its first item
+  if (files) {
+    data.set('file', files[0]);
+  } else {
+    // Handle the case where files is null
+    console.error('No files selected.');
+    return; // Return early to prevent further execution
+  }
     ev.preventDefault();
-    console.log(file);
+    console.log(files);
     const response = await fetch('http://localhost:3001/post', {
        method: 'POST',
        body: data,
@@ -121,6 +125,8 @@ export default function AdminPage() {
             </Form.Group>
             <Form.Group controlId="formFileLg" className="mb-3">
               <Form.Label>News Picture</Form.Label>
+              <input type="file"
+             onChange={ev => setFiles(ev.target.files)} />
             </Form.Group>
             <Editor value={content} onChange={setContent} />
             <Button style={{ marginTop: '10px' }} variant="success" type="submit">
