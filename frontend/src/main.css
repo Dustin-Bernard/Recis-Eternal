@@ -10,9 +10,6 @@
 }
 
 /* Global Style */
-.container {
-  border: 1px solid red; /* Buat Gampang Liat Posisi */
-}
 
 .form-container {
   display: flex;
@@ -59,6 +56,14 @@
   width: 100%;
 }
 
+.navbar {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
 .navbar-toggle {
   margin: 0 20%;
 }
@@ -69,6 +74,11 @@
 
 #navlink:hover {
   color: #f95852;
+}
+
+.navbar.color-active {
+  background-color: white;
+  border-bottom: 2px solid #f957525d;
 }
 
 @media (min-width: 992px) {
@@ -155,4 +165,9 @@
 .img-size {
   height: 300px;
   width: auto;
+}
+
+/* About Style */
+.background-color {
+  background-color: #f7f7f7;
 }

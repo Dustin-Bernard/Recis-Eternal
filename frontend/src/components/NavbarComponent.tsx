@@ -1,9 +1,26 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
+import { useState, useEffect } from "react";
 
 const NavbarComponent = () => {
+  const [changeColor, setChangeColor] = useState(false);
+
+  const changeBackgroundColor = () => {
+    if (window.scrollY > 10) {
+      setChangeColor(true);
+    } else {
+      setChangeColor(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackgroundColor();
+
+    window.addEventListener("scroll", changeBackgroundColor);
+  });
+
   return (
     <div className="navbar-geming position-fixed top-0 w-100">
-      <Navbar expand="lg">
+      <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
         <Container>
           <Navbar.Brand
             id="navbar-brand-id"
