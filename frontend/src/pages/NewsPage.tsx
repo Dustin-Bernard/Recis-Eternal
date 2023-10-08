@@ -31,15 +31,18 @@ export default function NewsPage() {
 
 
   return (<>
-    {posts.length > 0 && posts.map(post => (
-      <Post _id={post._id}
+    {posts.length > 0 && posts.map(post => {
+ const author = { username: post.author.username };
+ return (
+    <Post _id={post._id}
       title={post.title}
       desc={post.desc}
       cover={post.cover}
       content={post.content}
       createdAt={post.createdAt}
-      author={post.author}/>
-    ))}
+      author={author}/>
+ );
+})}
   </>)
 };
 

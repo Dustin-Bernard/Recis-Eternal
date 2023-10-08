@@ -22,7 +22,7 @@ export default function Post(props: PostProps) {
       </div>
       <div className="texts">
         <Link to={`/post/${_id}`}>
-        <h2>{title}</h2>
+        <h1>{title}</h1>
         </Link>
         <p className="info">
           <a className="author">{author.username}</a>
