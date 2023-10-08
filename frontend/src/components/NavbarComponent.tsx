@@ -2,20 +2,37 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 const NavbarComponent = () => {
   return (
-    <div className="navbar-geming position-sticky top-0 w-100">
+    <div className="navbar-geming position-fixed top-0 w-100">
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand id="navbar-brand-id" href="/" className="mx-auto">
+          <Navbar.Brand
+            id="navbar-brand-id"
+            href="/"
+            className="mx-auto text-center"
+          >
             Eternal Recis
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="navbar-toggle"
+          />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/news">News</Nav.Link>
-              <Nav.Link href="/shop">Shop</Nav.Link>
-              <Nav.Link href="/schedule">Schedule</Nav.Link>
+            <Nav className="mx-auto text-center">
+              <Nav.Link id="navlink" href="/">
+                Home
+              </Nav.Link>
+              <Nav.Link id="navlink" href="/about">
+                About
+              </Nav.Link>
+              <Nav.Link id="navlink" href="/news">
+                News
+              </Nav.Link>
+              <Nav.Link id="navlink" href="/shop">
+                Shop
+              </Nav.Link>
+              <Nav.Link id="navlink" href="/schedule">
+                Schedule
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -10,14 +10,11 @@ import { Pagination } from "swiper/modules";
 import { Col, Container, Row } from "react-bootstrap";
 
 import DummyImage from "../assets/-Insert_image_here-.svg.png";
-import BackgroundImage from "../assets/Retro Background.png";
-
 import Card from "react-bootstrap/Card";
 
 const HomePage = () => {
   return (
     <div>
-      <img src={BackgroundImage} alt="" className="bg-img top-0" />
       <div className="homepage pt-5">
         <div className="thumbnail pb-5 py-5">
           <Container className="pb-5">

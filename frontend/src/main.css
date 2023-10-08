@@ -56,6 +56,19 @@
 /* NavbarComponent Style */
 .navbar-geming {
   z-index: 1000;
+  width: 100%;
+}
+
+.navbar-toggle {
+  margin: 0 20%;
+}
+
+#navlink {
+  color: black;
+}
+
+#navlink:hover {
+  color: #f95852;
 }
 
 @media (min-width: 992px) {
@@ -82,6 +95,26 @@
 }
 
 /* Thumbnail Style */
+
+.homepage {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #c6ffdd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #f09935,
+    #f8cb75,
+    #7acfba
+  ); /* Chrome 18-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #f09935,
+    #f8cb75,
+    #7acfba
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 2 Opera 12+, Safari 7+ */
+}
 
 .swiper {
   width: 100%;
