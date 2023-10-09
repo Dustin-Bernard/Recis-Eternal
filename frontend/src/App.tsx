@@ -11,9 +11,6 @@ import SchedulePage from "./pages/SchedulePage";
 import AdminPage from "./pages/AdminPage.tsx";
 import PostPage from "./pages/PostPage";
 
-
-
-
 const App = () => {
   return (
     <div>
@@ -23,7 +20,7 @@ const App = () => {
         <Route path="/" Component={HomePage} />
         <Route path="/about" Component={AboutPage} />
         <Route path="/news" Component={NewsPage} />
-        <Route path="/shop" Component={ShopPage} />
+        <Route path="/merch" Component={ShopPage} />
         <Route path="/schedule" Component={SchedulePage} />
         <Route path="/admin" Component={AdminPage} />
         <Route path="/login" Component={LoginPage} />

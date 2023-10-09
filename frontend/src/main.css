@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Special+Elite&display=swap");
+
 * {
   font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-family: "Special Elite", cursive;
 }
 
 .bg-img {
@@ -10,6 +16,10 @@
 }
 
 /* Global Style */
+
+.padding-top {
+  padding-top: 100px;
+}
 
 .form-container {
   display: flex;
@@ -81,6 +91,15 @@
   border-bottom: 2px solid #f957525d;
 }
 
+#navbar-brand-id {
+  font-family: "Special Elite", cursive;
+  font-weight: 590;
+}
+
+.navbar-nav a {
+  font-family: "Special Elite", cursive;
+}
+
 @media (min-width: 992px) {
   .navbar-nav a {
     font-size: 1.5rem;
@@ -111,19 +130,6 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: #c6ffdd; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #f09935,
-    #f8cb75,
-    #7acfba
-  ); /* Chrome 18-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #f09935,
-    #f8cb75,
-    #7acfba
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 2 Opera 12+, Safari 7+ */
 }
 
 .swiper {

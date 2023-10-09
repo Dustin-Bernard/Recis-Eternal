@@ -44,8 +44,8 @@ const NavbarComponent = () => {
               <Nav.Link id="navlink" href="/news">
                 News
               </Nav.Link>
-              <Nav.Link id="navlink" href="/shop">
-                Shop
+              <Nav.Link id="navlink" href="/merch">
+                Merch
               </Nav.Link>
               <Nav.Link id="navlink" href="/schedule">
                 Schedule

@@ -11,11 +11,20 @@ import { Col, Container, Row } from "react-bootstrap";
 
 import DummyImage from "../assets/-Insert_image_here-.svg.png";
 import Card from "react-bootstrap/Card";
+import background from "../assets/Retro-Background.png";
 
 const HomePage = () => {
   return (
     <div>
-      <div className="homepage pt-5">
+      <div
+        className="homepage pt-5"
+        style={{
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="thumbnail pb-5 py-5">
           <Container className="py-5">
             <Swiper
@@ -74,8 +83,8 @@ const HomePage = () => {
       <div className="background-color">
         <div className="headlineNews">
           <div className="info text-center">
-            <Container className="mb-5">
-              <h2>Headline News</h2>
+            <Container className="mb-5 pt-5">
+              <h1>Headline News</h1>
               <Row>
                 <Col className="d-flex justify-content-center">
                   HEADLINE NEWS HEADLINE NEWS HEADLINE NEWS HEADLINE NEWS
@@ -91,7 +100,7 @@ const HomePage = () => {
 
           <div className="about">
             <Container className="text-center">
-              <h2>About</h2>
+              <h1>About</h1>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
                 illum porro eius. Sapiente dolore, non eos deserunt aut vitae
@@ -103,7 +112,7 @@ const HomePage = () => {
 
           <div>
             <Container className="my-5 place-items-center">
-              <h2 className="text-center p-3">News</h2>
+              <h1 className="text-center p-3">News</h1>
               <div className="pb-3">
                 <Swiper
                   slidesPerView={1}
@@ -210,7 +219,7 @@ const HomePage = () => {
 
           <div>
             <Container className="text-center mb-5">
-              <h2>Merch</h2>
+              <h1>Merch</h1>
               <Row>
                 <Col>
                   <img src={DummyImage} alt="" className="img-size" />
@@ -230,7 +239,7 @@ const HomePage = () => {
 
           <div>
             <Container className="pb-5">
-              <h2 className="text-center mb-3">Schedule</h2>
+              <h1 className="text-center mb-3">Schedule</h1>
               <h3>Opening</h3>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.

@@ -1,10 +1,16 @@
-import BackgroundImage from "../assets/Retro Background.png";
+import { Container } from "react-bootstrap";
 
 const AboutPage = () => {
   return (
-    <div>
-      <img src={BackgroundImage} alt="" className="bg-img top-0" />
-      <div>AboutPage</div>
+    <div className="about padding-top background-color">
+      <Container className="text-center">
+        <h1>About</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed illum
+          porro eius. Sapiente dolore, non eos deserunt aut vitae magnam ipsam
+          eius libero aliquid repellat reiciendis tenetur! At, eius maxime.
+        </p>
+      </Container>
     </div>
   );
 };
