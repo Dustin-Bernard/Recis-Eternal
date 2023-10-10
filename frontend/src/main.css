@@ -18,7 +18,7 @@ h1 {
 /* Global Style */
 
 .padding-top {
-  padding-top: 100px;
+  padding-top: 90px;
 }
 
 .form-container {
@@ -64,6 +64,7 @@ h1 {
 .navbar-geming {
   z-index: 1000;
   width: 100%;
+  
 }
 
 .navbar {
@@ -72,7 +73,10 @@ h1 {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
 }
+
+
 
 .navbar-toggle {
   margin: 0 20%;
@@ -89,6 +93,9 @@ h1 {
 .navbar.color-active {
   background-color: white;
   border-bottom: 2px solid #f957525d;
+}
+.navbar.color-active #navlink:hover {
+  color: #f95852;
 }
 
 #navbar-brand-id {
@@ -176,4 +183,16 @@ h1 {
 /* About Style */
 .background-color {
   background-color: #f7f7f7;
+}
+
+
+/* newspage css */
+.newspage {
+  display: flex;
+  justify-content: center;
+  margin: 25px;
+}
+
+.card {
+  height: 40;
 }

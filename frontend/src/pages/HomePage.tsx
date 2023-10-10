@@ -12,10 +12,35 @@ import { Col, Container, Row } from "react-bootstrap";
 import DummyImage from "../assets/-Insert_image_here-.svg.png";
 import Card from "react-bootstrap/Card";
 import background from "../assets/Retro-Background.png";
+import { useEffect, useState } from "react";
+
+
+type PostType = {
+  _id: string;
+  title: string;
+  desc: string;
+  cover: string;
+  content: string;
+  createdAt: string;
+  author: {
+    username: string;
+  };
+};
 
 const HomePage = () => {
+  const [posts, setPosts] = useState<PostType[]>([]);
+  useEffect(() => {
+    fetch("http://localhost:3001/post")
+      .then((response) => response.json())
+      .then((postsData) => {
+        setPosts(postsData);
+      });
+  }, []);
+
+  
+
   return (
-    <div>
+    <div >
       <div
         className="homepage pt-5"
         style={{

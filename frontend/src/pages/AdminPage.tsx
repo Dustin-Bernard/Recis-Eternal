@@ -104,8 +104,7 @@ export default function AdminPage() {
   return (
     isAdmin && (
       <>
-        <Button onClick={logout}>LOGOUT</Button>
-        <Container className="my-5 form-container">
+        <Container className="my-5 form-container padding-top">
           <Form id="admin-form-parent" onSubmit={createNewPost} encType="multipart/form-data">
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>News Title</Form.Label>
@@ -133,6 +132,7 @@ export default function AdminPage() {
               Post
             </Button>
           </Form>
+        <Button onClick={logout}>LOGOUT</Button>
         </Container>
       </>
     )

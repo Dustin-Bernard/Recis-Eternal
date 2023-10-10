@@ -1,5 +1,8 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Image } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import Logo from '../assets/eternal_rainbow.png';
+import RecisLogo from '../assets/recis_logo.png';
+
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
@@ -21,7 +24,13 @@ const NavbarComponent = () => {
   return (
     <div className="navbar-geming position-fixed top-0 w-100">
       <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
-        <Container>
+        <Container >
+          <Navbar.Brand className="nav-logo" href="https://reginapacis.sch.id/" target="_blank">
+            <Image src={RecisLogo} style={{height: "60px", width: "45px",}} className="logo"  />
+          </Navbar.Brand>
+          <Navbar.Brand className="nav-logo" href="/">
+            <Image src={Logo} style={{height: "60px", width: "60px",}} className="logo" roundedCircle />
+          </Navbar.Brand>
           <Navbar.Brand
             id="navbar-brand-id"
             href="/"

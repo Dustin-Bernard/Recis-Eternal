@@ -24,7 +24,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <Container className="my-5" onSubmit={register}>
+    <Container className="my-5 padding-top" onSubmit={register}>
       <div id="register-id">
         <h1>Register</h1>
         <form id="register-id" action="">
