@@ -1,8 +1,8 @@
 import { Navbar, Nav, Container, Image } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import Logo from '../assets/eternal_rainbow.png';
-import RecisLogo from '../assets/recis_logo.png';
-
+import Logo from "../assets/eternal_rainbow.png";
+import RecisLogo from "../assets/recis_logo.png";
+import { NavLink } from "react-router-dom";
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
@@ -24,12 +24,25 @@ const NavbarComponent = () => {
   return (
     <div className="navbar-geming position-fixed top-0 w-100">
       <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
-        <Container >
-          <Navbar.Brand className="nav-logo" href="https://reginapacis.sch.id/" target="_blank">
-            <Image src={RecisLogo} style={{height: "60px", width: "45px",}} className="logo"  />
+        <Container>
+          <Navbar.Brand
+            className="nav-logo"
+            href="https://reginapacis.sch.id/"
+            target="_blank"
+          >
+            <Image
+              src={RecisLogo}
+              style={{ height: "60px", width: "45px" }}
+              className="logo"
+            />
           </Navbar.Brand>
           <Navbar.Brand className="nav-logo" href="/">
-            <Image src={Logo} style={{height: "60px", width: "60px",}} className="logo" roundedCircle />
+            <Image
+              src={Logo}
+              style={{ height: "60px", width: "60px" }}
+              className="logo"
+              roundedCircle
+            />
           </Navbar.Brand>
           <Navbar.Brand
             id="navbar-brand-id"
@@ -44,21 +57,21 @@ const NavbarComponent = () => {
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto text-center">
-              <Nav.Link id="navlink" href="/">
+              <NavLink id="navlink" to="/">
                 Home
-              </Nav.Link>
-              <Nav.Link id="navlink" href="/about">
+              </NavLink>
+              <NavLink id="navlink" to="/about">
                 About
-              </Nav.Link>
-              <Nav.Link id="navlink" href="/news">
+              </NavLink>
+              <NavLink id="navlink" to="/news">
                 News
-              </Nav.Link>
-              <Nav.Link id="navlink" href="/merch">
+              </NavLink>
+              <NavLink id="navlink" to="/merch">
                 Merch
-              </Nav.Link>
-              <Nav.Link id="navlink" href="/schedule">
+              </NavLink>
+              <NavLink id="navlink" to="/schedule">
                 Schedule
-              </Nav.Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
