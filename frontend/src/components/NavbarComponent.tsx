@@ -49,7 +49,7 @@ const NavbarComponent = () => {
             href="/"
             className="mx-auto text-center"
           >
-            Eternal Recis
+            Recis Eternal
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
