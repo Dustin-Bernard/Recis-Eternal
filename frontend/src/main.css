@@ -88,7 +88,19 @@ h1 {
 }
 
 .navbar.color-active {
-  background-color: white;
+  background: rgb(243, 241, 241); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffffff,
+    #ffffff,
+    #a6a8a8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ffffff,
+    #ffffff,
+    #a6a8a8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-bottom: 2px solid #f957525d;
   padding: 15px 0;
 }
@@ -148,7 +160,7 @@ h1 {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: none;
 
   /* Center slide text vertically */
   display: flex;
@@ -181,12 +193,66 @@ h1 {
   width: auto;
 }
 
+/* Headline News Style */
+.headlineNews {
+  background: rgb(243, 241, 241); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffffff,
+    #ffffff,
+    #a6a8a8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ffffff,
+    #ffffff,
+    #a6a8a8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 /* About Style */
+.about {
+  background: #2b3132; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #3c4446,
+    #2b3132,
+    #161a1a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #3c4446,
+    #2b3132,
+    #161a1a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+.about p {
+  font-size: 25px;
+}
+
 .background-color {
   background-color: #f7f7f7;
 }
 
 /* newspage css */
+.news {
+  background: #7acfba; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #b8eee0,
+    #87d8c4,
+    #5ba08f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #b8eee0,
+    #87d8c4,
+    #5ba08f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .newspage {
   display: flex;
   justify-content: center;
@@ -195,6 +261,58 @@ h1 {
 
 .card {
   height: 40;
+}
+
+/* Merch Style */
+.merch {
+  background: #f8cb75; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffe0a7,
+    #f8cb75,
+    #f5b53f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ffe0a7,
+    #f8cb75,
+    #f5b53f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Schedule Style */
+.schedule {
+  background: #348c62; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #50c78e,
+    #348c62,
+    #246344
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #50c78e,
+    #348c62,
+    #246344
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+/* Footer Style */
+.footer {
+  background: rgb(243, 241, 241); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #ffffff,
+    #ffffff,
+    #a6a8a8
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #ffffff,
+    #ffffff,
+    #a6a8a8
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Scrollbar */

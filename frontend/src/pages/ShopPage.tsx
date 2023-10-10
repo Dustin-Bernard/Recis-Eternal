@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const ShopPage = () => {
   return (
     <div className="padding-top background-color">
-      <Container className="text-center mb-5">
+      <Container className="text-center py-5">
         <h1>Merch</h1>
         <Row>
           <Col>

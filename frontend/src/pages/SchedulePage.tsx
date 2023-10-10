@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 const SchedulePage = () => {
   return (
     <div className="padding-top background-color">
-      <Container className="pb-5">
+      <Container className="py-5">
         <h1 className="text-center mb-3">Schedule</h1>
         <h3>Opening</h3>
         <p>
