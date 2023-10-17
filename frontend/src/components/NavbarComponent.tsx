@@ -63,9 +63,6 @@ const NavbarComponent = () => {
               <NavLink id="navlink" to="/about">
                 About
               </NavLink>
-              <NavLink id="navlink" to="/news">
-                News
-              </NavLink>
               <NavLink id="navlink" to="/merch">
                 Merch
               </NavLink>

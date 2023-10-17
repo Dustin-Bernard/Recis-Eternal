@@ -1,23 +1,23 @@
-import DummyImage from "../assets/-Insert_image_here-.svg.png";
+import Merch1 from "../assets/2.png";
+import Merch2 from "../assets/3.png";
+import Merch3 from "../assets/4.png";
 import { Col, Container, Row } from "react-bootstrap";
 
 const ShopPage = () => {
   return (
-    <div className="padding-top background-color">
-      <Container className="text-center py-5">
-        <h1>Merch</h1>
+    <div className="merch merchPage">
+      <Container className="text-center pb-5">
+        <h1 style={{ fontWeight: "600" }}>Merch</h1>
+        <br />
         <Row>
           <Col>
-            <img src={DummyImage} alt="" className="img-size" />
-            <h4>Merch Description</h4>
+            <img src={Merch1} alt="" className="img-size" />
           </Col>
           <Col>
-            <img src={DummyImage} alt="" className="img-size" />
-            <h4>Merch Description</h4>
+            <img src={Merch2} alt="" className="img-size" />
           </Col>
           <Col>
-            <img src={DummyImage} alt="" className="img-size" />
-            <h4>Merch Description</h4>
+            <img src={Merch3} alt="" className="img-size" />
           </Col>
         </Row>
       </Container>
