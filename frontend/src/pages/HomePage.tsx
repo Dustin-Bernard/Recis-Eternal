@@ -1,13 +1,15 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
+
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Image } from "react-bootstrap";
 
 import DummyImage from "../assets/-Insert_image_here-.svg.png";
 import Card from "react-bootstrap/Card";
@@ -52,17 +54,17 @@ const HomePage = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="thumbnail pb-5 py-5">
+        <div className="padding-top thumbnail pb-5 py-5">
           <Container>
-            <Row>
-              <Col className="text-center d-flex justify-content-center align-items-center flex-column">
-                <h1 style={{ fontSize: "120px", color: "white" }}>Eternal</h1>
-                <p style={{ fontSize: "30px", color: "white" }}>
+            <Row id="thumb" xl={2} md={2} xs={1}>
+              <Col className="fluid text-center d-flex justify-content-center align-items-center flex-column">
+                <h1 id="ETERNAL" style={{ fontSize: "16vw", color: "white"}}>ETERNAL</h1>
+                <p style={{ fontSize: "4vw", color: "white" }}>
                   18 November 2023
                 </p>
               </Col>
               <Col className="text-center d-flex justify-content-center align-items-center">
-                <img style={{ height: "400px" }} src={LogoHivi} alt="" />
+                <Image  style={{ height: "auto", maxWidth: "100%" }} src={LogoHivi} alt="" fluid/>
               </Col>
             </Row>
           </Container>
@@ -219,15 +221,15 @@ const HomePage = () => {
             <Container className="text-center pb-5">
               <h1 style={{ fontWeight: "600" }}>Merch</h1>
               <br />
-              <Row>
+              <Row xs={1} xl={3} md={3} gap={3}>
                 <Col>
-                  <img src={Merch1} alt="" className="img-size" />
+                  <Image fluid src={Merch1} alt="" className="img-size" />
                 </Col>
                 <Col>
-                  <img src={Merch2} alt="" className="img-size" />
+                  <Image fluid src={Merch2} alt="" className="img-size" />
                 </Col>
                 <Col>
-                  <img src={Merch3} alt="" className="img-size" />
+                  <Image fluid src={Merch3} alt="" className="img-size" />
                 </Col>
               </Row>
             </Container>

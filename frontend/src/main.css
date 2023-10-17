@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins&family=Special+Elite&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gabarito&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
   font-family: "Poppins", sans-serif;
 }
+#ETERNAL {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+}
+
 
 h1 {
   font-family: "Poppins";
