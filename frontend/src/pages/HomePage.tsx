@@ -42,7 +42,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <div
         className="homepage pt-5"
         style={{
