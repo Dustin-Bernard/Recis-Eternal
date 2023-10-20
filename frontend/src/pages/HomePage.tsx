@@ -1,8 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -58,13 +56,28 @@ const HomePage = () => {
           <Container>
             <Row id="thumb" xl={2} md={2} xs={1}>
               <Col className="fluid text-center d-flex justify-content-center align-items-center flex-column">
-                <h1 id="ETERNAL" style={{ fontSize: "16vw", color: "white"}}>ETERNAL</h1>
-                <p style={{ fontSize: "4vw", color: "white" }}>
+                <h1
+                  id="ETERNAL"
+                  style={{ fontSize: "13vw", color: "white" }}
+                  className="animate__animated animate__fadeInLeft"
+                >
+                  ETERNAL
+                </h1>
+                <p
+                  style={{ fontSize: "3vw", color: "white" }}
+                  className="animate__animated animate__fadeInLeft"
+                >
                   18 November 2023
                 </p>
               </Col>
               <Col className="text-center d-flex justify-content-center align-items-center">
-                <Image  style={{ height: "auto", maxWidth: "100%" }} src={LogoHivi} alt="" fluid/>
+                <Image
+                  style={{ height: "auto", maxWidth: "80%" }}
+                  src={LogoHivi}
+                  alt=""
+                  fluid
+                  className="animate__animated animate__fadeInUp z-1"
+                />
               </Col>
             </Row>
           </Container>
@@ -91,9 +104,19 @@ const HomePage = () => {
 
           <div className="about py-5">
             <Container className="text-center">
-              <h1 style={{ fontWeight: "600" }}>About</h1>
+              <h1
+                style={{ fontWeight: "600" }}
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                About
+              </h1>
               <br />
-              <p>
+              <p
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
                 Recis Eternal adalah susunan acara perlombaan dan pentas seni
                 (pensi) yang diselenggarakan oleh SMA Regina Pacis Bogor pada
                 tahun 2023. Pelaksanaan pensi merupakan suatu tradisi yang telah
@@ -219,17 +242,47 @@ const HomePage = () => {
 
           <div className="merch">
             <Container className="text-center pb-5">
-              <h1 style={{ fontWeight: "600" }}>Merch</h1>
+              <h1
+                style={{ fontWeight: "600" }}
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                Merch
+              </h1>
               <br />
               <Row xs={1} xl={3} md={3} gap={3}>
                 <Col>
-                  <Image fluid src={Merch1} alt="" className="img-size" />
+                  <Image
+                    fluid
+                    src={Merch1}
+                    alt=""
+                    className="img-size"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                  />
                 </Col>
                 <Col>
-                  <Image fluid src={Merch2} alt="" className="img-size" />
+                  <Image
+                    fluid
+                    src={Merch2}
+                    alt=""
+                    className="img-size"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                  />
                 </Col>
                 <Col>
-                  <Image fluid src={Merch3} alt="" className="img-size" />
+                  <Image
+                    fluid
+                    src={Merch3}
+                    alt=""
+                    className="img-size"
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                  />
                 </Col>
               </Row>
             </Container>
@@ -237,43 +290,54 @@ const HomePage = () => {
 
           <div className="schedule">
             <Container className="pb-5">
-              <h1 className="text-center mb-3" style={{ fontWeight: "600" }}>
+              <h1
+                className="text-center mb-3"
+                style={{ fontWeight: "600" }}
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
                 Schedule
               </h1>
               <br />
-              <h3>Opening</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Accusamus optio incidunt dolor quod corrupti facilis dolores
-                perspiciatis! Incidunt cumque maiores dolor omnis totam
-                quibusdam eaque possimus aspernatur alias, ipsum sint asperiores
-                quae, quo corporis numquam minima. Dolor impedit animi
-                consequuntur consectetur ducimus quasi velit, odit totam,
-                perferendis dolore porro? Quae, omnis earum quas exercitationem
-                quis officiis. Architecto modi iusto quidem.
-              </p>
-              <h3>Recup</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Accusamus optio incidunt dolor quod corrupti facilis dolores
-                perspiciatis! Incidunt cumque maiores dolor omnis totam
-                quibusdam eaque possimus aspernatur alias, ipsum sint asperiores
-                quae, quo corporis numquam minima. Dolor impedit animi
-                consequuntur consectetur ducimus quasi velit, odit totam,
-                perferendis dolore porro? Quae, omnis earum quas exercitationem
-                quis officiis. Architecto modi iusto quidem.
-              </p>
-              <h3>Closing</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Accusamus optio incidunt dolor quod corrupti facilis dolores
-                perspiciatis! Incidunt cumque maiores dolor omnis totam
-                quibusdam eaque possimus aspernatur alias, ipsum sint asperiores
-                quae, quo corporis numquam minima. Dolor impedit animi
-                consequuntur consectetur ducimus quasi velit, odit totam,
-                perferendis dolore porro? Quae, omnis earum quas exercitationem
-                quis officiis. Architecto modi iusto quidem.
-              </p>
+              <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
+                <h3>Opening</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Accusamus optio incidunt dolor quod corrupti facilis dolores
+                  perspiciatis! Incidunt cumque maiores dolor omnis totam
+                  quibusdam eaque possimus aspernatur alias, ipsum sint
+                  asperiores quae, quo corporis numquam minima. Dolor impedit
+                  animi consequuntur consectetur ducimus quasi velit, odit
+                  totam, perferendis dolore porro? Quae, omnis earum quas
+                  exercitationem quis officiis. Architecto modi iusto quidem.
+                </p>
+                <h3>Recup</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Accusamus optio incidunt dolor quod corrupti facilis dolores
+                  perspiciatis! Incidunt cumque maiores dolor omnis totam
+                  quibusdam eaque possimus aspernatur alias, ipsum sint
+                  asperiores quae, quo corporis numquam minima. Dolor impedit
+                  animi consequuntur consectetur ducimus quasi velit, odit
+                  totam, perferendis dolore porro? Quae, omnis earum quas
+                  exercitationem quis officiis. Architecto modi iusto quidem.
+                </p>
+                <h3>Closing</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Accusamus optio incidunt dolor quod corrupti facilis dolores
+                  perspiciatis! Incidunt cumque maiores dolor omnis totam
+                  quibusdam eaque possimus aspernatur alias, ipsum sint
+                  asperiores quae, quo corporis numquam minima. Dolor impedit
+                  animi consequuntur consectetur ducimus quasi velit, odit
+                  totam, perferendis dolore porro? Quae, omnis earum quas
+                  exercitationem quis officiis. Architecto modi iusto quidem.
+                </p>
+              </div>
             </Container>
           </div>
         </div>

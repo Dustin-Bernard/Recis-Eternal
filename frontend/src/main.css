@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins&family=Special+Elite&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gabarito&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   font-family: "Poppins", sans-serif;
 }
 #ETERNAL {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   letter-spacing: 3px;
 }
-
 
 h1 {
   font-family: "Poppins";
@@ -80,6 +79,8 @@ h1 {
   z-index: 1000;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.342);
+  animation-name: fadeInDown;
+  animation-duration: 1s;
 }
 
 .navbar {
@@ -205,13 +206,19 @@ h1 {
 }
 
 .img-size {
-  height: 400px;
-  width: auto;
+  max-width: 70% !important;
+  padding: 10px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .img-size {
+    max-width: 100% !important;
+  }
 }
 
 /* Headline News Style */

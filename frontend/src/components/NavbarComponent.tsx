@@ -57,7 +57,8 @@ const NavbarComponent = () => {
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
-            className="navbar-toggle" onClick={handleShow}
+            className="navbar-toggle"
+            onClick={handleShow}
           />
           {/* <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto text-center">
@@ -76,54 +77,57 @@ const NavbarComponent = () => {
             </Nav>
           </Navbar.Collapse> */}
           <Offcanvas show={show} onHide={handleClose} responsive="lg">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title> <Navbar.Brand
-            className="nav-logo"
-            href="https://reginapacis.sch.id/"
-            target="_blank"
-          >
-            <Image
-              src={RecisLogo}
-              style={{ height: "60px", width: "45px" }}
-              className="logo"
-            />
-          </Navbar.Brand>
-          <Navbar.Brand className="nav-logo" href="/">
-            <Image
-              src={Logo}
-              style={{ height: "60px", width: "60px" }}
-              className="logo"
-              roundedCircle
-            />
-          </Navbar.Brand>
-          <Navbar.Brand
-            id="navbar-brand-id"
-            href="/"
-            className="mx-auto text-center"
-          >
-            Recis Eternal
-          </Navbar.Brand></Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-        <Nav className="mx-auto text-center">
-              <NavLink id="navlink" to="/">
-                Home
-              </NavLink>
-              <NavLink id="navlink" to="/about">
-                About
-              </NavLink>
-              <NavLink id="navlink" to="/news">
-                News
-              </NavLink>
-              <NavLink id="navlink" to="/merch">
-                Merch
-              </NavLink>
-              <NavLink id="navlink" to="/schedule">
-                Schedule
-              </NavLink>
-            </Nav>
-        </Offcanvas.Body>
-      </Offcanvas>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title>
+                {" "}
+                <Navbar.Brand
+                  className="nav-logo"
+                  href="https://reginapacis.sch.id/"
+                  target="_blank"
+                >
+                  <Image
+                    src={RecisLogo}
+                    style={{ height: "60px", width: "45px" }}
+                    className="logo"
+                  />
+                </Navbar.Brand>
+                <Navbar.Brand className="nav-logo" href="/">
+                  <Image
+                    src={Logo}
+                    style={{ height: "60px", width: "60px" }}
+                    className="logo"
+                    roundedCircle
+                  />
+                </Navbar.Brand>
+                <Navbar.Brand
+                  id="navbar-brand-id"
+                  href="/"
+                  className="mx-auto text-center"
+                >
+                  Recis Eternal
+                </Navbar.Brand>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="mx-auto text-center">
+                <NavLink id="navlink" to="/">
+                  Home
+                </NavLink>
+                <NavLink id="navlink" to="/about">
+                  About
+                </NavLink>
+                <NavLink id="navlink" to="/news">
+                  News
+                </NavLink>
+                <NavLink id="navlink" to="/merch">
+                  Merch
+                </NavLink>
+                <NavLink id="navlink" to="/schedule">
+                  Schedule
+                </NavLink>
+              </Nav>
+            </Offcanvas.Body>
+          </Offcanvas>
         </Container>
       </Navbar>
     </div>
