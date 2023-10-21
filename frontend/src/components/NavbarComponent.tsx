@@ -80,7 +80,7 @@ const NavbarComponent = () => {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
                 {" "}
-                <Navbar.Brand
+                {/* <Navbar.Brand
                   className="nav-logo"
                   href="https://reginapacis.sch.id/"
                   target="_blank"
@@ -90,7 +90,7 @@ const NavbarComponent = () => {
                     style={{ height: "60px", width: "45px" }}
                     className="logo"
                   />
-                </Navbar.Brand>
+                </Navbar.Brand> */}
                 <Navbar.Brand className="nav-logo" href="/">
                   <Image
                     src={Logo}
