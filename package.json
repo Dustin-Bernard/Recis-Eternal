@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@vercel/node": "^3.0.7",
     "animate.css": "^4.1.1",
     "react-router-dom": "^6.17.0",
     "swiper": "^10.3.1"
