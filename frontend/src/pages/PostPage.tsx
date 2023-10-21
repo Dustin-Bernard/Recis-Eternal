@@ -44,7 +44,7 @@
 //       );
 //     } 
 
-import { useEffect, useState } from "react"http://localhost:3001/
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import DOMPurify from "dompurify";
 // import { Button, Card, Image } from "react-bootstrap";
