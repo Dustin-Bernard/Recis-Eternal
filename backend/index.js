@@ -26,6 +26,10 @@ mongoose.connect('mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.
 
 const tokenExpiration = '1h';
 
+app.get('/', (req, res) => {
+  res.json('bisa')
+});
+
 app.get('/tes', (req, res) => {
   res.json('test')
 });
