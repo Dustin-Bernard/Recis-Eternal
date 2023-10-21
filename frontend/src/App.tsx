@@ -11,6 +11,7 @@ import SchedulePage from "./pages/SchedulePage";
 import AdminPage from "./pages/AdminPage.tsx";
 import PostPage from "./pages/PostPage";
 
+
 const App = () => {
   return (
     <div>
