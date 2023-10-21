@@ -2,8 +2,8 @@ import { Navbar, Nav, Container, Image, Offcanvas } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import Logo from "../assets/eternal_rainbow.png";
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavbarComponent = () => {
   const [changeColor, setChangeColor] = useState(false);
@@ -11,7 +11,7 @@ const NavbarComponent = () => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
   const changeBackgroundColor = () => {
     if (window.scrollY > 10) {
       setChangeColor(true);
@@ -60,13 +60,14 @@ const NavbarComponent = () => {
           >
             Recis Eternal
           </Navbar.Brand>
-          <Navbar.Toggle  style={{ border: 'none' }}
- aria-controls="basic-navbar-nav"
- className="navbar-toggle"
- onClick={handleShow}
->
- <FontAwesomeIcon icon={faBars} style={{color: "#000000",}} />
-</Navbar.Toggle>
+          <Navbar.Toggle
+            style={{ border: "none" }}
+            aria-controls="basic-navbar-nav"
+            className="navbar-toggle"
+            onClick={handleShow}
+          >
+            <FontAwesomeIcon icon={faBars} style={{ color: "#000000" }} />
+          </Navbar.Toggle>
           {/* <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto text-center">
               <NavLink id="navlink" to="/">
@@ -83,7 +84,12 @@ const NavbarComponent = () => {
               </NavLink>
             </Nav>
           </Navbar.Collapse> */}
-          <Offcanvas show={show} onHide={handleClose} responsive="lg" onClick={handleNavLinkClick}>
+          <Offcanvas
+            show={show}
+            onHide={handleClose}
+            responsive="lg"
+            onClick={handleNavLinkClick}
+          >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
                 {" "}

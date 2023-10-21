@@ -135,9 +135,25 @@ h1 {
   font-size: 1.2rem;
 }
 
+.offcanvas-title.h5 {
+  padding-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 320px) {
   #navbar-brand-id {
     font-size: 1.4rem;
+  }
+  .offcanvas-title.h5 {
+    padding-left: 15%;
+  }
+}
+
+@media (min-width: 425px) {
+  .offcanvas-title.h5 {
+    padding-left: 18%;
   }
 }
 
