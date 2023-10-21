@@ -14,7 +14,7 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'ajkdflasjhfslah617t76dg78gd7812y';
 
-app.use(cors({ credentials: true, origin: [''], methods: ["GET", "POST"]}));
+app.use(cors({ credentials: true, origin: 'http://localhost:5173', methods: ["GET", "POST"]}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
@@ -25,10 +25,6 @@ mongoose.connect('mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.
 
 
 const tokenExpiration = '1h';
-
-app.get('/', (req, res) => {
-  res.json('bisa')
-});
 
 app.get('/tes', (req, res) => {
   res.json('test')
