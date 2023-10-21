@@ -24,7 +24,7 @@ export default function NewsPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("http://localhost:3001/post");
+        const response = await fetch("https://recis-eternal-official-api.vercel.app/post");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
