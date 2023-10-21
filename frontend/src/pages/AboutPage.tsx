@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 const AboutPage = () => {
   return (
     <div className="about aboutPage py-5">
-      <Container className="text-center">
+      <Container className="text-center fluid" style={{ maxWidth: "80%" }}>
         <h1 style={{ fontWeight: "600" }}>About</h1>
         <br />
         <p>

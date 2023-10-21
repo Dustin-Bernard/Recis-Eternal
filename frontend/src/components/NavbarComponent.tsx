@@ -29,7 +29,7 @@ const NavbarComponent = () => {
     <div className="navbar-geming position-fixed top-0 w-100">
       <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
         <Container>
-          <Navbar.Brand
+          {/* <Navbar.Brand
             className="nav-logo"
             href="https://reginapacis.sch.id/"
             target="_blank"
@@ -39,7 +39,7 @@ const NavbarComponent = () => {
               style={{ height: "60px", width: "45px" }}
               className="logo"
             />
-          </Navbar.Brand>
+          </Navbar.Brand> */}
           <Navbar.Brand className="nav-logo" href="/">
             <Image
               src={Logo}

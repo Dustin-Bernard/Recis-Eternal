@@ -124,7 +124,7 @@ h1 {
 #navbar-brand-id {
   font-family: "Gabarito";
   font-weight: 590;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #3e4647;
 }
 
@@ -133,6 +133,18 @@ h1 {
   padding: 5px 10px;
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+@media (min-width: 320px) {
+  #navbar-brand-id {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #navbar-brand-id {
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width: 992px) {
