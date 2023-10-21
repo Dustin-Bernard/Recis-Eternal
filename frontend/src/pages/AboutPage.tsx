@@ -3,10 +3,10 @@ import { Container } from "react-bootstrap";
 const AboutPage = () => {
   return (
     <div className="about aboutPage py-5">
-      <Container className="text-center fluid" style={{ maxWidth: "80%" }}>
+      <Container className="text-center animate__animated animate__fadeInLeft">
         <h1 style={{ fontWeight: "600" }}>About</h1>
         <br />
-        <p>
+        <p id="aboutP" className="animate__animated animate__fadeInLeft">
           Recis Eternal adalah susunan acara perlombaan dan pentas seni (pensi)
           yang diselenggarakan oleh SMA Regina Pacis Bogor pada tahun 2023.
           Pelaksanaan pensi merupakan suatu tradisi yang telah dilakukan setiap

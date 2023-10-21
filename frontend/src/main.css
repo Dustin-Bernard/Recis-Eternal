@@ -227,9 +227,25 @@ h1 {
   -o-border-radius: 20px;
 }
 
+#aboutP {
+  font-size: 15px;
+}
+
+@media (min-width: 576px) {
+  #aboutP {
+    font-size: 1.1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .img-size {
     max-width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #aboutP {
+    font-size: 1.3rem;
   }
 }
 
@@ -261,7 +277,7 @@ h1 {
 
 /* Merch Style */
 .merchPage {
-  height: 85vh;
+  padding-top: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
