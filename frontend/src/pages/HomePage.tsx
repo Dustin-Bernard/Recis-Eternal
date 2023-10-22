@@ -13,23 +13,12 @@ import DummyImage from "../assets/-Insert_image_here-.svg.png";
 import Card from "react-bootstrap/Card";
 import LogoHivi from "../assets/1.png";
 import background from "../assets/Background-Final.png";
-import { useEffect, useState } from "react";
+
 
 import Merch1 from "../assets/2.png";
 import Merch2 from "../assets/3.png";
 import Merch3 from "../assets/4.png";
 
-type PostType = {
-  _id: string;
-  title: string;
-  desc: string;
-  cover: string;
-  content: string;
-  createdAt: string;
-  author: {
-    username: string;
-  };
-};
 
 const HomePage = () => {
   
