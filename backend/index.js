@@ -28,7 +28,7 @@ mongoose.connect(uri);
 
 
 const tokenExpiration = '1h';
-
+const upload = multer({ dest: 'uploads/' });
 app.get('/tes', (req, res) => {
   res.json('test')
 });
@@ -145,6 +145,10 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 });
 
+app.post('/upload', upload.single('file'), (req, res) => {
+  // Mengunggah file ke server Anda sendiri
+  res.send('File berhasil diunggah');
+ });
 
 
 app.listen(process.env.APP_PORT);
