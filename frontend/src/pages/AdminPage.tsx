@@ -41,7 +41,7 @@ export default function AdminPage() {
         
 
         try {
-          const response = await fetch("http://localhost:3001/admin", {
+          const response = await fetch("https://reciseternal-backend.vercel.app/admin", {
             method: "GET",
             headers: {
               "Authorization": `Bearer ${token}`,
@@ -83,7 +83,7 @@ export default function AdminPage() {
   }
     ev.preventDefault();
     console.log(files);
-    const response = await fetch('http://localhost:3001/post', {
+    const response = await fetch('https://reciseternal-backend.vercel.app/post', {
        method: 'POST',
        body: data,
        credentials: 'include',
