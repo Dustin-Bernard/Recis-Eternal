@@ -24,7 +24,7 @@ export default function NewsPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("https://reciseternal-backend.vercel.app/post");
+        const response = await fetch("http://localhost:3001/post");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -51,7 +51,7 @@ export default function NewsPage() {
             <Card style={{ width: '25rem' }} className="card">
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-              <Image src={`https://reciseternal-backend.vercel.app/${post.cover}`} thumbnail/>
+              <Image src={`http://localhost:3001/${post.cover}`} thumbnail/>
               <Card.Title>{post.title}</Card.Title>
               <Card.Text>
                Author : {post.author.username} 

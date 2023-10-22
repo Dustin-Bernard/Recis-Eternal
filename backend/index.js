@@ -16,7 +16,7 @@ require('dotenv').config();
 const salt = bcrypt.genSaltSync(10);
 const secret = 'ajkdflasjhfslah617t76dg78gd7812y';
 
-app.use(cors({ credentials: true, origin: 'https://reciseternal.vercel.app/', methods: ["GET", "POST"]}));
+app.use(cors({ credentials: true, origin: 'http://localhost:5173', methods: ["GET", "POST"]}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
