@@ -8,6 +8,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
+const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 require('dotenv').config();
 
@@ -27,7 +28,7 @@ mongoose.connect(uri);
 
 
 const tokenExpiration = '1h';
-const upload = multer({ dest: 'uploads/' });
+
 app.get('/tes', (req, res) => {
   res.json('test')
 });
@@ -76,7 +77,7 @@ app.get('/admin', (req, res) => {
 //   res.json({files:req.file});
 // })
 
-app.post('/post', async (req, res) => {
+app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
   const {originalname,path} = req.file;
   const parts = originalname.split('.');
   const ext = parts[parts.length - 1];
@@ -99,7 +100,7 @@ app.post('/post', async (req, res) => {
   });
  });
  
- app.put('/post/:id',  async (req, res) => {
+ app.put('/post/:id', uploadMiddleware.single('file'), async (req, res) => {
   const {id} = req.params;
   const {originalname,path} = req.file;
   const parts = originalname.split('.');
@@ -144,15 +145,6 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 });
 
-app.post('/upload', upload.single('file'), (req, res) => {
-  const file = req.file;
-  if (!file) {
-     const error = new Error('Please upload a file');
-     error.httpStatusCode = 400;
-     return next(error);
-  }
-  res.send(file);
- });
 
 
 app.listen(process.env.APP_PORT);
