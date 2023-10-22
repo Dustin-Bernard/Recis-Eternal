@@ -32,14 +32,7 @@ type PostType = {
 };
 
 const HomePage = () => {
-  const [posts, setPosts] = useState<PostType[]>([]);
-  useEffect(() => {
-    fetch("http://localhost:3001/post")
-      .then((response) => response.json())
-      .then((postsData) => {
-        setPosts(postsData);
-      });
-  }, []);
+  
 
   return (
     <div className="overflow-hidden">
