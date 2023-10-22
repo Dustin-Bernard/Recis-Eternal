@@ -20,8 +20,8 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
 
-
-mongoose.connect("mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.net/?retryWrites=true&w=majority");
+const uri = process.env.MONGO_URL;
+mongoose.connect(uri);
 
 
 const tokenExpiration = '1h';
