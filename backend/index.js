@@ -21,7 +21,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 
 
 
-mongoose.connect('mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect("mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.net/?retryWrites=true&w=majority");
 
 
 const tokenExpiration = '1h';
@@ -144,4 +144,4 @@ app.get('/post/:id', async (req, res) => {
 
 
 
-app.listen(3001);
+app.listen(process.env.APP_PORT);
