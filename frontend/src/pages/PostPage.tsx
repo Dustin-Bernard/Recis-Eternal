@@ -67,7 +67,7 @@ export default function PostPage () {
     const { id } = useParams<{ id: string }>();
 
     useEffect(() => {
-        fetch(`http://localhost:3001/post/${id}`)
+        fetch(`https://reciseternal-backend.vercel.app/${id}`)
           .then(response => {
             response.json().then(postInfo => {
               setPostInfo(postInfo);
@@ -83,7 +83,7 @@ export default function PostPage () {
             <div>
               <h1>{postInfo.title}</h1>
               <p>{postInfo.desc}</p>
-              <img src={`http://localhost:3001/${postInfo.cover}`} alt="" />
+              <img src={`https://reciseternal-backend.vercel.app/${postInfo.cover}`} alt="" />
               <div className="content" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(postInfo.content)}} />
             </div>
 

@@ -10,18 +10,21 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
+require('dotenv').config();
+
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'ajkdflasjhfslah617t76dg78gd7812y';
 
-app.use(cors({ credentials: true, origin: 'http://localhost:5173', methods: ["GET", "POST"]}));
+app.use(cors({ credentials: true, origin: 'https://reciseternal.vercel.app/', methods: ["GET", "POST"]}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
 
-
-mongoose.connect('mongodb+srv://recis:A6PzQYSKNuNnXum2@cluster0.0afnatd.mongodb.net/?retryWrites=true&w=majority');
+const uri = process.env.MONGO_URL;
+console.log(uri);
+mongoose.connect(uri);
 
 
 const tokenExpiration = '1h';
@@ -144,4 +147,4 @@ app.get('/post/:id', async (req, res) => {
 
 
 
-app.listen(3001);
+app.listen(process.env.APP_PORT);
