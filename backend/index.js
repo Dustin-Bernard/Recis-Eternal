@@ -10,6 +10,8 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
+require('dotenv').config();
+
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'ajkdflasjhfslah617t76dg78gd7812y';
@@ -21,6 +23,7 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 
 
 const uri = process.env.MONGO_URL;
+console.log(uri);
 mongoose.connect(uri);
 
 
