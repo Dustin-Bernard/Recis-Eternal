@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import NavbarComponent from "./components/NavbarComponent";
-import FooterComponent from "./components/FooterComponent";
+// import FooterComponent from "./components/FooterComponent";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import HomePage from "./pages/HomePage";
@@ -10,7 +10,6 @@ import ShopPage from "./pages/ShopPage";
 import SchedulePage from "./pages/SchedulePage";
 import AdminPage from "./pages/AdminPage.tsx";
 import PostPage from "./pages/PostPage";
-
 
 const App = () => {
   return (
@@ -28,8 +27,6 @@ const App = () => {
         <Route path="/register" Component={RegisterPage} />
         <Route path="/post/:id" Component={PostPage} />
       </Routes>
-
-      <FooterComponent />
     </div>
   );
 };

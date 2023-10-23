@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const AboutPage = () => {
   return (
-    <div className="about aboutPage py-5">
+    <div className="about aboutPage">
       <Container className="text-center animate__animated animate__fadeInLeft">
         <h1 style={{ fontWeight: "600" }}>About</h1>
         <br />
