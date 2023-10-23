@@ -293,11 +293,17 @@ h1 {
 
 /* Merch Style */
 .merchPage {
-  height: 100vh;
+  padding-top: 12vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(244, 251, 255);
+}
+
+@media (min-width: 768px) {
+  .merchPage {
+    height: 100vh;
+  }
 }
 
 /* Schedule Style */
