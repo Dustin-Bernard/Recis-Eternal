@@ -22,6 +22,22 @@ h1 {
 
 /* Global Style */
 
+.responsiveT {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .responsiveT {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .responsiveT {
+    font-size: 1.8rem;
+  }
+}
+
 .padding-top {
   padding-top: 90px;
 }
@@ -325,7 +341,7 @@ h1 {
   background-color: rgb(244, 251, 255);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 478px) {
   .tournamentPage {
     padding-top: 13vh;
     height: auto;

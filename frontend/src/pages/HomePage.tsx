@@ -325,7 +325,7 @@ const HomePage = () => {
           <div className="tournament">
             <Container>
               <h1
-                className="text-center"
+                className="text-center pb-5"
                 style={{ fontWeight: "600" }}
                 data-aos="fade-right"
                 data-aos-duration="1000"
@@ -333,6 +333,13 @@ const HomePage = () => {
                 Tournament Bracket
               </h1>
               <Row xl={1} md={1} xs={1}>
+                <h3
+                  className="text-center responsiveT"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  Basket Putri
+                </h3>
                 <Col className="text-center d-flex justify-content-center align-items-center">
                   <Image
                     style={{ height: "auto", maxWidth: "100%" }}
@@ -343,6 +350,14 @@ const HomePage = () => {
                     data-aos-duration="1000"
                   />
                 </Col>
+
+                <h3
+                  className="text-center responsiveT"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  Basket Putra
+                </h3>
                 <Col className="text-center d-flex justify-content-center align-items-center">
                   <Image
                     style={{ height: "auto", maxWidth: "100%" }}
