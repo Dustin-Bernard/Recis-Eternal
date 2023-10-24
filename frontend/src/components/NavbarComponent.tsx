@@ -138,6 +138,9 @@ const NavbarComponent = () => {
                 <NavLink id="navlink" to="/schedule">
                   Schedule
                 </NavLink>
+                <NavLink id="navlink" to="/tournament">
+                  Tournament
+                </NavLink>
               </Nav>
             </Offcanvas.Body>
           </Offcanvas>

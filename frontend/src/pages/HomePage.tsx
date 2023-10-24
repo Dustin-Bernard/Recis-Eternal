@@ -17,6 +17,8 @@ import background from "../assets/Background-Final.png";
 import Merch1 from "../assets/2.png";
 import Merch2 from "../assets/3.png";
 import Merch3 from "../assets/4.png";
+import Basket1 from "../assets/Basket 1.png";
+import Basket2 from "../assets/Basket 2.png";
 
 const HomePage = () => {
   return (
@@ -317,6 +319,39 @@ const HomePage = () => {
                   (08.00 - 17.00)
                 </p>
               </div>
+            </Container>
+          </div>
+
+          <div className="tournament">
+            <Container>
+              <h1
+                className="text-center"
+                style={{ fontWeight: "600" }}
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Tournament Bracket
+              </h1>
+              <Row xl={1} md={1} xs={1}>
+                <Col className="text-center d-flex justify-content-center align-items-center">
+                  <Image
+                    style={{ height: "auto", maxWidth: "100%" }}
+                    src={Basket1}
+                    alt=""
+                    fluid
+                    className="animate__animated animate__fadeInUp z-1"
+                  />
+                </Col>
+                <Col className="text-center d-flex justify-content-center align-items-center">
+                  <Image
+                    style={{ height: "auto", maxWidth: "100%" }}
+                    src={Basket2}
+                    alt=""
+                    fluid
+                    className="animate__animated animate__fadeInUp z-1"
+                  />
+                </Col>
+              </Row>
             </Container>
           </div>
         </div>

@@ -316,6 +316,15 @@ h1 {
   background-color: rgb(244, 251, 255);
 }
 
+/* Tournament Style */
+.tournamentPage {
+  padding-top: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(244, 251, 255);
+}
+
 /* Footer Style */
 .footer {
   background-color: white;
