@@ -339,7 +339,8 @@ const HomePage = () => {
                     src={Basket1}
                     alt=""
                     fluid
-                    className="animate__animated animate__fadeInUp z-1"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
                   />
                 </Col>
                 <Col className="text-center d-flex justify-content-center align-items-center">
@@ -348,7 +349,8 @@ const HomePage = () => {
                     src={Basket2}
                     alt=""
                     fluid
-                    className="animate__animated animate__fadeInUp z-1"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
                   />
                 </Col>
               </Row>
