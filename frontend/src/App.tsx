@@ -23,7 +23,7 @@ const App = () => {
         <Route path="/news" Component={NewsPage} />
         <Route path="/merch" Component={ShopPage} />
         <Route path="/schedule" Component={SchedulePage} />
-        <Route path="/tournament" Component={TournamentPage} />
+        <Route path="/eternal cup" Component={TournamentPage} />
         <Route path="/admin" Component={AdminPage} />
         <Route path="/login" Component={LoginPage} />
         <Route path="/register" Component={RegisterPage} />

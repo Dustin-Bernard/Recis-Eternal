@@ -330,7 +330,7 @@ const HomePage = () => {
                 data-aos="fade-right"
                 data-aos-duration="1000"
               >
-                Tournament Bracket
+                Eternal Cup
               </h1>
               <Row xl={1} md={1} xs={1}>
                 <h3
