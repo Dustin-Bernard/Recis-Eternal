@@ -61,7 +61,7 @@ const TournamentPage = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Voli
+            Voli Putri
           </h3>
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
@@ -79,7 +79,7 @@ const TournamentPage = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Futsal Group AB
+            Futsal Putra
           </h3>
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
@@ -92,13 +92,6 @@ const TournamentPage = () => {
             />
           </Col>
 
-          <h3
-            className="text-center responsiveT"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Futsal Group CD
-          </h3>
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
               style={{ height: "auto", maxWidth: "100%" }}
@@ -110,13 +103,6 @@ const TournamentPage = () => {
             />
           </Col>
 
-          <h3
-            className="text-center responsiveT"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Futsal Group EF
-          </h3>
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
               style={{ height: "auto", maxWidth: "100%" }}
@@ -128,13 +114,6 @@ const TournamentPage = () => {
             />
           </Col>
 
-          <h3
-            className="text-center responsiveT"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            Futsal Group GH
-          </h3>
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
               style={{ height: "auto", maxWidth: "100%" }}
