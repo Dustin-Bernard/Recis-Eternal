@@ -1,6 +1,11 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
-import Basket1 from "../assets/Basket 1.png";
-import Basket2 from "../assets/Basket 2.png";
+import BasketPutri from "../assets/Basket Putri D2.png";
+import BasketPutra from "../assets/Basket Putra D2.png";
+import Voli from "../assets/Voli D2.png";
+import FutsalAB from "../assets/Futsal AB D0.png";
+import FutsalCD from "../assets/Futsal CD D0.png";
+import FutsalEF from "../assets/Futsal EF D0.png";
+import FutsalGH from "../assets/Futsal GH D0.png";
 
 const TournamentPage = () => {
   return (
@@ -25,7 +30,7 @@ const TournamentPage = () => {
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
               style={{ height: "auto", maxWidth: "100%" }}
-              src={Basket1}
+              src={BasketPutri}
               alt=""
               fluid
               data-aos="fade-up"
@@ -43,7 +48,97 @@ const TournamentPage = () => {
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
               style={{ height: "auto", maxWidth: "100%" }}
-              src={Basket2}
+              src={BasketPutra}
+              alt=""
+              fluid
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            />
+          </Col>
+
+          <h3
+            className="text-center responsiveT"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Voli
+          </h3>
+          <Col className="text-center d-flex justify-content-center align-items-center">
+            <Image
+              style={{ height: "auto", maxWidth: "100%" }}
+              src={Voli}
+              alt=""
+              fluid
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            />
+          </Col>
+
+          <h3
+            className="text-center responsiveT"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Futsal Group AB
+          </h3>
+          <Col className="text-center d-flex justify-content-center align-items-center">
+            <Image
+              style={{ height: "auto", maxWidth: "100%" }}
+              src={FutsalAB}
+              alt=""
+              fluid
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            />
+          </Col>
+
+          <h3
+            className="text-center responsiveT"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Futsal Group CD
+          </h3>
+          <Col className="text-center d-flex justify-content-center align-items-center">
+            <Image
+              style={{ height: "auto", maxWidth: "100%" }}
+              src={FutsalCD}
+              alt=""
+              fluid
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            />
+          </Col>
+
+          <h3
+            className="text-center responsiveT"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Futsal Group EF
+          </h3>
+          <Col className="text-center d-flex justify-content-center align-items-center">
+            <Image
+              style={{ height: "auto", maxWidth: "100%" }}
+              src={FutsalEF}
+              alt=""
+              fluid
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            />
+          </Col>
+
+          <h3
+            className="text-center responsiveT"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            Futsal Group GH
+          </h3>
+          <Col className="text-center d-flex justify-content-center align-items-center">
+            <Image
+              style={{ height: "auto", maxWidth: "100%" }}
+              src={FutsalGH}
               alt=""
               fluid
               data-aos="fade-up"
