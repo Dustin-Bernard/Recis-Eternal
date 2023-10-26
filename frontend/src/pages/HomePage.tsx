@@ -17,6 +17,8 @@ import background from "../assets/Background-Final.png";
 import Merch1 from "../assets/2.png";
 import Merch2 from "../assets/3.png";
 import Merch3 from "../assets/4.png";
+
+// Tournament Brackets
 import BasketPutri from "../assets/Basket Putri D2.png";
 import BasketPutra from "../assets/Basket Putra D2.png";
 import Voli from "../assets/Voli D2.png";
