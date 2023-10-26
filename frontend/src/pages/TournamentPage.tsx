@@ -1,11 +1,11 @@
 import { Col, Container, Row, Image } from "react-bootstrap";
-import BasketPutri from "../assets/Basket Putri D2.png";
-import BasketPutra from "../assets/Basket Putra D2.png";
-import Voli from "../assets/Voli D2.png";
-import FutsalAB from "../assets/Futsal AB D0.png";
-import FutsalCD from "../assets/Futsal CD D0.png";
-import FutsalEF from "../assets/Futsal EF D0.png";
-import FutsalGH from "../assets/Futsal GH D0.png";
+import BasketPutri from "../assets/Basket Putri.png";
+import BasketPutra from "../assets/Basket Putra.png";
+import Voli from "../assets/Voli.png";
+import FutsalAB from "../assets/Futsal AB.png";
+import FutsalCD from "../assets/Futsal CD.png";
+import FutsalEF from "../assets/Futsal EF.png";
+import FutsalGH from "../assets/Futsal GH.png";
 
 const TournamentPage = () => {
   return (
