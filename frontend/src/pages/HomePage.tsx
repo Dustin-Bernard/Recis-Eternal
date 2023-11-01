@@ -10,7 +10,6 @@ import { Pagination } from "swiper/modules";
 import { Col, Container, Row, Image } from "react-bootstrap";
 
 import DummyImage from "../assets/-Insert_image_here-.svg.png";
-import Card from "react-bootstrap/Card";
 import LogoHivi from "../assets/1.png";
 import background from "../assets/Background-Final.png";
 
@@ -27,6 +26,12 @@ import FutsalCD from "../assets/Futsal CD.png";
 import FutsalEF from "../assets/Futsal EF.png";
 import FutsalGH from "../assets/Futsal GH.png";
 import FutsalBracket from "../assets/Futsal Bracket.png";
+import BandChamp from "../assets/Band Champions.png";
+import BasketPutraChamp from "../assets/Basket Putra Champions.png";
+import BasketPutriChamp from "../assets/Basket Putri Champions.png";
+import EDCChamp from "../assets/English Debate Champions.png";
+import MDChamp from "../assets/Modern Dance Champions.png";
+import VoliPutriChamp from "../assets/Volley Putri Champions.png";
 
 const HomePage = () => {
   return (
@@ -122,9 +127,16 @@ const HomePage = () => {
             </Container>
           </div>
 
-          <div className="news">
-            <Container className="py-5 place-items-center">
-              <h1 className="text-center p-3">News</h1>
+          <div className="backgroundColor">
+            <Container className="py-5 place-items-center mt-5">
+            <h1
+          className="text-center pb-5"
+          style={{ fontWeight: "600" }}
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          Eternal Cup Champion
+        </h1>
               <div className="pb-3">
                 <Swiper
                   slidesPerView={1}
@@ -156,78 +168,40 @@ const HomePage = () => {
                 >
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={BandChamp} alt="" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={BasketPutraChamp} alt="" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={BasketPutriChamp} alt="" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={EDCChamp} alt="" />
                     </div>
                   </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={MDChamp} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={VoliPutriChamp} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  
                 </Swiper>
               </div>
-              <Row id="parent-grid">
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
-          </div>
+        
+        </Container>
+        </div>
 
           <div className="merch">
             <Container className="text-center pb-5">

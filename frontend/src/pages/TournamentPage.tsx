@@ -15,13 +15,20 @@ import FutsalAB from "../assets/Futsal AB.png";
 import FutsalCD from "../assets/Futsal CD.png";
 import FutsalEF from "../assets/Futsal EF.png";
 import FutsalGH from "../assets/Futsal GH.png";
+import FutsalBracket from "../assets/Futsal Bracket.png";
+import BandChamp from "../assets/Band Champions.png";
+import BasketPutraChamp from "../assets/Basket Putra Champions.png";
+import BasketPutriChamp from "../assets/Basket Putri Champions.png";
+import EDCChamp from "../assets/English Debate Champions.png";
+import MDChamp from "../assets/Modern Dance Champions.png";
+import VoliPutriChamp from "../assets/Volley Putri Champions.png";
 
 const TournamentPage = () => {
   return (
     
       <div className="backgroundColor">
-            <Container className="py-5 place-items-center">
-              <h1 className="text-center p-3">News</h1>
+            <Container className="py-5 place-items-center mt-5">
+              <h1 className="text-center p-3">Congratulations for Eternal Cup Champion!</h1>
               <div className="pb-3">
                 <Swiper
                   slidesPerView={1}
@@ -53,24 +60,35 @@ const TournamentPage = () => {
                 >
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={BandChamp} alt="" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={BasketPutraChamp} alt="" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={BasketPutriChamp} alt="" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div>
-                      <img src={DummyImage} alt="" />
+                      <img src={EDCChamp} alt="" />
                     </div>
                   </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={MDChamp} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={VoliPutriChamp} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  
                 </Swiper>
               </div>
         <h1
