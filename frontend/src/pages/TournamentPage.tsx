@@ -1,3 +1,12 @@
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper/modules";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import BasketPutri from "../assets/Basket Putri.png";
 import BasketPutra from "../assets/Basket Putra.png";
@@ -9,8 +18,61 @@ import FutsalGH from "../assets/Futsal GH.png";
 
 const TournamentPage = () => {
   return (
-    <div className="tournament tournamentPage">
-      <Container>
+    
+      <div className="backgroundColor">
+            <Container className="py-5 place-items-center">
+              <h1 className="text-center p-3">News</h1>
+              <div className="pb-3">
+                <Swiper
+                  slidesPerView={1}
+                  spaceBetween={10}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 1,
+                      spaceBetween: 40,
+                    },
+                    992: {
+                      slidesPerView: 1,
+                      spaceBetween: 50,
+                    },
+
+                    1200: {
+                      slidesPerView: 1,
+                      spaceBetween: 50,
+                    },
+                  }}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide>
+                    <div>
+                      <img src={DummyImage} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={DummyImage} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={DummyImage} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={DummyImage} alt="" />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
         <h1
           className="text-center pb-5"
           style={{ fontWeight: "600" }}
@@ -81,6 +143,17 @@ const TournamentPage = () => {
           >
             Futsal Putra
           </h3>
+          <Col className="text-center d-flex justify-content-center align-items-center">
+            <Image
+              style={{ height: "auto", maxWidth: "100%" }}
+              src={FutsalBracket}
+              alt=""
+              fluid
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            />
+          </Col>
+
           <Col className="text-center d-flex justify-content-center align-items-center">
             <Image
               style={{ height: "auto", maxWidth: "100%" }}

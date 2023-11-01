@@ -26,6 +26,7 @@ import FutsalAB from "../assets/Futsal AB.png";
 import FutsalCD from "../assets/Futsal CD.png";
 import FutsalEF from "../assets/Futsal EF.png";
 import FutsalGH from "../assets/Futsal GH.png";
+import FutsalBracket from "../assets/Futsal Bracket.png";
 
 const HomePage = () => {
   return (
@@ -401,6 +402,17 @@ const HomePage = () => {
                 >
                   Futsal Putra
                 </h3>
+                <Col className="text-center d-flex justify-content-center align-items-center">
+                  <Image
+                    style={{ height: "auto", maxWidth: "100%" }}
+                    src={FutsalBracket}
+                    alt=""
+                    fluid
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                  />
+                </Col>
+
                 <Col className="text-center d-flex justify-content-center align-items-center">
                   <Image
                     style={{ height: "auto", maxWidth: "100%" }}
