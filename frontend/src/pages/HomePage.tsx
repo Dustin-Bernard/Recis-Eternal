@@ -62,6 +62,13 @@ const HomePage = () => {
                 >
                   18 November 2023
                 </p>
+                <a
+                  href="https://forms.gle/jCXBjurewrso88Kq5"
+                  style={{}}
+                  className="buyButton animate__animated animate__fadeInLeft p-2"
+                >
+                  Buy Our Merch!
+                </a>
               </Col>
               <Col className="text-center d-flex justify-content-center align-items-center">
                 <Image
@@ -129,14 +136,14 @@ const HomePage = () => {
 
           <div className="backgroundColor">
             <Container className="py-5 place-items-center mt-5">
-            <h1
-          className="text-center pb-5"
-          style={{ fontWeight: "600" }}
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
-          Eternal Cup Champion
-        </h1>
+              <h1
+                className="text-center pb-5"
+                style={{ fontWeight: "600" }}
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Eternal Cup Champion
+              </h1>
               <div className="pb-3">
                 <Swiper
                   slidesPerView={1}
@@ -196,12 +203,10 @@ const HomePage = () => {
                       <img src={VoliPutriChamp} alt="" />
                     </div>
                   </SwiperSlide>
-                  
                 </Swiper>
               </div>
-        
-        </Container>
-        </div>
+            </Container>
+          </div>
 
           <div className="merch">
             <Container className="text-center pb-5">
