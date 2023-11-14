@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 import { Col, Container, Row, Image } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 
 import DummyImage from "../assets/-Insert_image_here-.svg.png";
 import LogoHivi from "../assets/1.png";
@@ -310,6 +311,59 @@ const HomePage = () => {
           </div>
 
           <div className="tournament">
+            {/* <Container>
+              <Row>
+                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Img variant="top" src={DummyImage} />
+                    <Card.Body>
+                      <Card.Title>News</Card.Title>
+                      <Card.Text>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dignissimos nihil ut repudiandae in ducimus deleniti.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Img variant="top" src={DummyImage} />
+                    <Card.Body>
+                      <Card.Title>News</Card.Title>
+                      <Card.Text>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dignissimos nihil ut repudiandae in ducimus deleniti.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Img variant="top" src={DummyImage} />
+                    <Card.Body>
+                      <Card.Title>News</Card.Title>
+                      <Card.Text>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dignissimos nihil ut repudiandae in ducimus deleniti.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
+                  <Card style={{ width: "18rem" }}>
+                    <Card.Img variant="top" src={DummyImage} />
+                    <Card.Body>
+                      <Card.Title>News</Card.Title>
+                      <Card.Text>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dignissimos nihil ut repudiandae in ducimus deleniti.
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Container> */}
+
             <Container>
               <h1
                 className="text-center pb-5"
