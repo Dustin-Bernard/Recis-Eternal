@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 import { Col, Container, Row, Image } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
 
 import DummyImage from "../assets/-Insert_image_here-.svg.png";
 import LogoHivi from "../assets/1.png";
@@ -17,6 +16,13 @@ import background from "../assets/Background-Final.png";
 import Merch1 from "../assets/2.png";
 import Merch2 from "../assets/3.png";
 import Merch3 from "../assets/4.png";
+
+// Carousel Dokumentasi
+import CrsDkm1 from "../assets/Carousel Dokum 1.png";
+import CrsDkm2 from "../assets/Carousel Dokum 2.png";
+import CrsDkm3 from "../assets/Carousel Dokum 3.png";
+import CrsDkm4 from "../assets/Carousel Dokum 4.png";
+import CrsDkm5 from "../assets/Carousel Dokum 5.png";
 
 // Tournament Brackets
 import BasketPutri from "../assets/Basket Putri.png";
@@ -33,6 +39,9 @@ import BasketPutriChamp from "../assets/Basket Putri Champions.png";
 import EDCChamp from "../assets/English Debate Champions.png";
 import MDChamp from "../assets/Modern Dance Champions.png";
 import VoliPutriChamp from "../assets/Volley Putri Champions.png";
+import PhotographyChamp1 from "../assets/Photography Champion 1.png";
+import PhotographyChamp2 from "../assets/Photography Champion 2.png";
+import PhotographyChamp3 from "../assets/Photography Champion 3.png";
 
 const HomePage = () => {
   return (
@@ -136,6 +145,81 @@ const HomePage = () => {
           </div>
 
           <div className="backgroundColor">
+            <Container className="text-center py-5 place-items-center mt-5">
+              <h1
+                className="text-center pb-5"
+                style={{ fontWeight: "600" }}
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                Documentation
+              </h1>
+              <div className="pb-3">
+                <Swiper
+                  slidesPerView={1}
+                  spaceBetween={10}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 1,
+                      spaceBetween: 40,
+                    },
+                    992: {
+                      slidesPerView: 1,
+                      spaceBetween: 50,
+                    },
+
+                    1200: {
+                      slidesPerView: 1,
+                      spaceBetween: 50,
+                    },
+                  }}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide>
+                    <div>
+                      <img src={CrsDkm1} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={CrsDkm2} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={CrsDkm3} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={CrsDkm4} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div>
+                      <img src={CrsDkm5} alt="" />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+              <a
+                href="https://drive.google.com/drive/folders/1--k1n6stWL3XFy03A9IcovKhr-akYVLo"
+                className="buyButton p-2 animate__animated animate__fadeInLeft"
+              >
+                View Photos
+              </a>
+            </Container>
+          </div>
+
+          <div className="backgroundColor">
             <Container className="py-5 place-items-center mt-5">
               <h1
                 className="text-center pb-5"
@@ -206,6 +290,43 @@ const HomePage = () => {
                   </SwiperSlide>
                 </Swiper>
               </div>
+            </Container>
+            <Container className="text-center pb-5">
+              <Row xs={1} xl={3} md={3} gap={3}>
+                <Col>
+                  <Image
+                    fluid
+                    src={PhotographyChamp1}
+                    alt=""
+                    className="img-size"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                  />
+                </Col>
+                <Col>
+                  <Image
+                    fluid
+                    src={PhotographyChamp2}
+                    alt=""
+                    className="img-size"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                  />
+                </Col>
+                <Col>
+                  <Image
+                    fluid
+                    src={PhotographyChamp3}
+                    alt=""
+                    className="img-size"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                  />
+                </Col>
+              </Row>
             </Container>
           </div>
 
@@ -311,59 +432,6 @@ const HomePage = () => {
           </div>
 
           <div className="tournament">
-            {/* <Container>
-              <Row>
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col className="text-center p-3 justify-content-center align-items-center d-flex">
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img variant="top" src={DummyImage} />
-                    <Card.Body>
-                      <Card.Title>News</Card.Title>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dignissimos nihil ut repudiandae in ducimus deleniti.
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-            </Container> */}
-
             <Container>
               <h1
                 className="text-center pb-5"
