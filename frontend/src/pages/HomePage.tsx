@@ -434,9 +434,11 @@ const HomePage = () => {
                   13.30-13.45 = Door Prize Sesi 2 <br />
                   13.45-14.00 = Performance Band <br />
                   14.00-14.15 = Door Prize Sesi 3 <br />
-                  14.15-15.10 = Performance <br />
-                  15.15-16.15 = HIVI! <br />
-                  16.15-16.30 = Closing
+                  14.15-15.00 = Performance <br />
+                  15.00-15.10 = Break Ashar <br />
+                  15.10-15.20 = Performance <br />
+                  15.25-16.25 = HIVI! <br />
+                  16.25-16.45 = Closing
                 </p>
               </div>
             </Container>
