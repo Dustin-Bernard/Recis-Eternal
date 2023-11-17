@@ -49,7 +49,18 @@ const SchedulePage = () => {
           <h3>Closing</h3>
           <p>
             18 November 2023 di SMA Regina Pacis Bogor <br />
-            (08.00 - 17.00)
+            11.00-12.30 = Open Gate <br />
+            11.30-12.30 = Pengumuman Lomba <br />
+            12.30-12.45 = Sambutan <br />
+            12.45-13.00 = Performance Band <br />
+            13.00-13.15 = Door Prize Sesi 1 <br />
+            13.15-13.30 = Performance Band <br />
+            13.30-13.45 = Door Prize Sesi 2 <br />
+            13.45-14.00 = Performance Band <br />
+            14.00-14.15 = Door Prize Sesi 3 <br />
+            14.15-15.10 = Performance <br />
+            15.15-16.15 = HIVI! <br />
+            16.15-16.30 = Closing
           </p>
         </div>
       </Container>
